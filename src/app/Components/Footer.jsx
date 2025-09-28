@@ -64,10 +64,10 @@ export const Footer = () => {
 					</div>
 
 					{/* Column 2 & 3: Useful Links (Displayed in two columns/lists) */}
-					<div className="col-span-1 md:col-span-2 text-[#2A2F32]">
+					<div className="col-span-1 md:col-span-2 text-[#2A2F32] w-full">
 						<h3 className="text-base font-bold mb-4">Useful Links</h3>
 
-						<div className="grid grid-cols-2 gap-2 w-fit">
+						<div className="grid grid-cols-2 justify-between md:w-fit gap-2">
 							{/* List 1 */}
 							<div className="space-y-1">
 								{usefulLinksCol1.map((link) => (

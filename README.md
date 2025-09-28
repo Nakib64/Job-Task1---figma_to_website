@@ -4,7 +4,7 @@
 
 ```bash
 # Clone the repository
-git clone <repository-url>
+git clone https://github.com/Nakib64/Job-Task1---figma_to_website.git
 
 # Go into the project folder
 cd <project-folder>

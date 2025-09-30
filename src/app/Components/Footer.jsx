@@ -38,10 +38,10 @@ export const Footer = () => {
 	return (
 		// Default white background, black text, minimal vertical padding
 		<footer className="bg-white text-black py-8 md:py-10 ">
-			<div className="grid grid-cols-1 lg:grid-cols-[auto_1fr_1fr] gap-8 lg:gap-14 xl:gap-20">
+			<div className="grid grid-cols-1 xl:grid-cols-[auto_1fr_1fr] gap-8 lg:gap-14 xl:gap-20 2xl:gap-30">
 				{/* Top Section: Logo and Social Icons */}
-				<div className="pr-8">
-					<h2 className="text-[32px] font-bold mb-4">Business Logo</h2>
+				<div className="pr-8 flex flex-col gap-7">
+					<h2 className="text-[32px] font-bold p-0 m-0">Business Logo</h2>
 					<div className="flex items-center gap-4">
 						<FaFacebook size={32} />
 						<FaLinkedinIn size={32}/>
@@ -50,11 +50,11 @@ export const Footer = () => {
 					</div>
 				</div>
 
-				<div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-20">
+				<div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-20 lg:gap-14">
 					{/* Column 1: Our Services */}
-					<div>
-						<h3 className="text-base font-bold mb-4">Our Services</h3>
-						<div className="space-y-1">
+					<div className="flex flex-col gap-4 xl:gap-6">
+						<h3 className="text-[14px] font-bold ">Our Services</h3>
+						<div className="space-y-4">
 							{services.map((link) => (
 								<FooterLink key={link.name} href={link.href}>
 									{link.name}
@@ -64,12 +64,12 @@ export const Footer = () => {
 					</div>
 
 					{/* Column 2 & 3: Useful Links (Displayed in two columns/lists) */}
-					<div className="col-span-1 md:col-span-2 text-[#2A2F32] w-full">
-						<h3 className="text-base font-bold mb-4">Useful Links</h3>
+					<div className="col-span-1 md:col-span-2 text-[#2A2F32] w-full flex flex-col gap-4 xl:gap-6">
+						<h3 className="text-[14px] font-bold ">Useful Links</h3>
 
 						<div className="grid grid-cols-2 justify-between md:w-fit gap-2">
 							{/* List 1 */}
-							<div className="space-y-1">
+							<div className="space-y-4">
 								{usefulLinksCol1.map((link) => (
 									<FooterLink key={link.name} href={link.href}>
 										{link.name}
@@ -77,7 +77,7 @@ export const Footer = () => {
 								))}
 							</div>
 							{/* List 2 */}
-							<div className="space-y-1">
+							<div className="space-y-4">
 								{usefulLinksCol2.map((link) => (
 									<FooterLink key={link.name} href={link.href}>
 										{link.name}
@@ -89,10 +89,10 @@ export const Footer = () => {
 				</div>
 
 				{/* Column 4: Contact Info (Full width on mobile/tablet) */}
-				<div className="col-span-1 font-semibold">
-					<h3 className="text-base font-bold mb-4">Contact Info</h3>
+				<div className="col-span-1 font-semibold flex flex-col gap-4 xl:gap-6">
+					<h3 className="text-[14px] font-bold ">Contact Info</h3>
 
-					<div className="space-y-3 text-sm">
+					<div className="space-y-5 text-[14px]">
 						<div className="flex items-start">
 							{/* Using an icon for structure, but minimal styling */}
 							<MapPin className="w-4 h-4 flex-shrink-0 mr-2 mt-1 text-black" />
